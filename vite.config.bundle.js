@@ -25,7 +25,7 @@ export default defineConfig({
       },
     },
     lib: {
-      entry: './src/components/Spinner.vue',
+      entry: './src/components/index.js',
       name: 'vue3-spinner',
       fileName: 'vue3-spinner',
       // formats: ['es', 'umd', 'cjs'],
