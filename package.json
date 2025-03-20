@@ -1,6 +1,6 @@
 {
-  "name": "vue-spinkit",
-  "version": "2.0.0",
+  "name": "vue3-spinkit",
+  "version": "0.0.1",
   "description": "A collection of loading indicators animated with CSS for VueJS",
   "author": "Chanwit Piromplad <kingkong2103@gmail.com>",
   "scripts": {
@@ -9,9 +9,10 @@
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore --fix src",
     "format": "prettier .  --write",
     "dev": "vite",
-    "wp-bundle": "vue-cli-service build --target=lib --filename=vue-spinkit --dest=build --formats=commonjs src/components/Spinner.vue"
+    "bundle": "vite build --config=vite.config.bundle.js"
   },
-  "main": "build/vue-spinkit.common.js",
+  "main": "build/vue3-spinner.js",
+  "module": "build/vue3-spinner.js",
   "files": [
     "build"
   ],
@@ -40,7 +41,9 @@
     "prettier": "^3.5.3",
     "prismjs": "^1.30.0",
     "randomcolor": "^0.6.2",
+    "unplugin-vue-define-options": "^3.0.0-beta.6",
     "vite": "^6.2.2",
+    "vite-plugin-dts": "^4.5.3",
     "vue": "^3.5.13"
   },
   "browserslist": [

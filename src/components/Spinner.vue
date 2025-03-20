@@ -22,7 +22,7 @@ import { defineComponent, reactive, computed } from 'vue'
 import * as DEFAULT_CONFIG from '../config'
 
 export default defineComponent({
-  name: 'Spinner',
+  name: 'imp-spinner',
   props: {
     name: {
       type: String,
