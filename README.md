@@ -14,10 +14,13 @@ npm install --save vue-spinkit
 
 ## How to use
 ```js
-import Vue from 'vue'
-import Spinner from 'vue-spinkit'
+import { createApp } from 'vue'
+import Spinner from 'vue3-spinkit'
+import App from './App.vue'
 
-Vue.component('Spinner', Spinner)
+const app = createApp(App)
+app.component('Spinner', Spinner)
+app.mount('#app')
 ```
 
 ## In file vue
