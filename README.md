@@ -16,16 +16,11 @@
   <a href="https://www.npmjs.com/package/vue3-spinkit">
     <img src="https://img.shields.io/npm/l/vue3-spinkit.svg?sanitize=true" alt="License">
   </a>
+   <a href="https://orcid.org/0009-0009-0993-7629">
+    <img src="https://img.shields.io/badge/iD-0009--0009--0993--7629-blue" alt="License">
+  </a>
 </p>
 
-<p align="center">
-  <div style="display: inline-block;padding: 1px 0;border-radius: 2px;overflow: hidden;">
-    <a href="https://orcid.org/0009-0009-0993-7629" style="display: flex;align-items: center;background: #7e88cd;">
-        <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" alt="ORCID" style="padding: 0 5px;"/>
-      <span style="padding: 0 5px;background: #4a76b6;color: #ffffff;">0009-0009-0993-7629</span>
-    </a>
-  </div>
-</p>
 
 # pre
 fork from https://github.com/TonPC64/vue-spinkit（vue 2）
