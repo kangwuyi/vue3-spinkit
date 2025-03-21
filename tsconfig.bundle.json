@@ -19,6 +19,6 @@
     "types": ["node"],
     // "noEmit": true
   },
-  "include": ["./src/components"],
+  "include": ["./src/components/*.ts"],
   "exclude": ["node_modules", "./src/vite-env.d.ts"]
 }

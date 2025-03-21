@@ -13,12 +13,16 @@ export default defineConfig({
     DefineOptions(),
     dts({
       // 将所有声明合并到一个文件
-      rollupTypes: true,
+      rollupTypes: false,
       // 指定 tsconfigPath
       tsconfigPath: './tsconfig.bundle.json',
-      insertTypesEntry: true,
+      // 基于 package.json 的 `types` 字段生成，或者 `${outDir}/index.d.ts`
+      insertTypesEntry: false,
+      // 将源码里的 .d.ts 文件复制到 `outDir`
       copyDtsFiles: false,
-      outDir: 'build/typings',
+      // 强制删除所有 Vite（Rollup）的原始产物
+      declarationOnly: false,
+      outDir: 'build',
     }),
   ],
   build: {
