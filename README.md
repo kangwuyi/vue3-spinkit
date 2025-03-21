@@ -4,10 +4,11 @@
   <a href="https://npmcharts.com/compare/vue3-spinkit?minimal=true"><img src="https://img.shields.io/npm/dm/vue3-spinkit.svg?sanitize=true" alt="Downloads"></a>
   <a href="https://www.npmjs.com/package/vue3-spinkit"><img src="https://img.shields.io/npm/v/vue3-spinkit.svg?sanitize=true" alt="Version"></a>
   <a href="https://www.npmjs.com/package/vue3-spinkit"><img src="https://img.shields.io/npm/l/vue3-spinkit.svg?sanitize=true" alt="License"></a>
-   <a href="https://orcid.org/0009-0009-0993-7629"><img src="https://img.shields.io/badge/iD-0009--0009--0993--7629-blue" alt="License"></a>
 </p>
 
-
+<p align="center">
+   <a href="https://orcid.org/0009-0009-0993-7629"><img src="https://img.shields.io/badge/iD-0009--0009--0993--7629-blue" alt="License"></a>
+</p>
 
 
 # pre
