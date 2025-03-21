@@ -1,12 +1,6 @@
 # vue3-spinkit
 
 <p align="center">
-  <!-- <a href="https://circleci.com/gh/vuejs/vue/tree/dev">
-    <img src="https://img.shields.io/circleci/project/github/vuejs/vue/dev.svg?sanitize=true" alt="Build Status">
-  </a> -->
-  <!-- <a href="https://codecov.io/github/vuejs/vue?branch=dev">
-    <img src="https://img.shields.io/codecov/c/github/vuejs/vue/dev.svg?sanitize=true" alt="Coverage Status">
-  </a> -->
   <a href="https://npmcharts.com/compare/vue3-spinkit?minimal=true">
     <img src="https://img.shields.io/npm/dm/vue3-spinkit.svg?sanitize=true" alt="Downloads">
   </a>
