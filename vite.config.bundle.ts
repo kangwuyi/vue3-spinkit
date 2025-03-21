@@ -13,7 +13,7 @@ export default defineConfig({
     DefineOptions(),
     dts({
       // 将所有声明合并到一个文件
-      rollupTypes: false,
+      rollupTypes: true,
       // 指定 tsconfigPath
       tsconfigPath: './tsconfig.bundle.json',
       // 基于 package.json 的 `types` 字段生成，或者 `${outDir}/index.d.ts`
@@ -52,7 +52,7 @@ export default defineConfig({
       entry: resolve(__dirname, '/src/components/index.ts'),
       name: 'vue3-spinner',
       fileName: 'vue3-spinner',
-      formats: ['es', 'umd', 'cjs'],
+      formats: ['es', 'umd'],
     },
   },
 })

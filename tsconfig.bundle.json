@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": "./src/components",
+    "baseUrl": ".",
     "jsx": "preserve",
     "strict": true,
     "target": "ES2015",
