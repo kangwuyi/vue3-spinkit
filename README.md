@@ -1,5 +1,23 @@
 # vue3-spinkit
 
+[![npm version](https://img.shields.io/npm/v/vue3-spinkit)]
+(https://badge.fury.io/js/vue3-spinkit)
+
+[![npm downloads](https://img.shields.io/npm/dm/vue3-spinkit)]
+(https://npm-stat.com/charts.html?package=vue3-spinkit)
+
+[![npm license](https://img.shields.io/npm/l/vue3-spinkit)]
+(https://github.com/kangwuyi/vue3-spinkit/LICENSE)
+
+<!-- [![Build Status](https://travis-ci.org/kangwuyi/vue3-spinkit.svg?branch=master)]
+(https://travis-ci.org/kangwuyi/vue3-spinkit) -->
+
+<!-- [![codecov](https://codecov.io/gh/kangwuyi/vue3-spinkit/branch/master/graph/badge.svg)]
+(https://codecov.io/gh/kangwuyi/vue3-spinkit) -->
+
+<!-- [![Stylelint](https://img.shields.io/badge/stylelint-enabled-brightgreen.svg)]
+(https://stylelint.io/) -->
+
 # pre
 fork from https://github.com/TonPC64/vue-spinkit（vue 2）
 
