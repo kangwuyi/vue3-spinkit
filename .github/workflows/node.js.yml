@@ -26,14 +26,26 @@ jobs:
     - run: npm run build 
     - run: npm run bundle
 
-    # - name: Install dependencies
-    #   run: npm install
+  test:
+    name: Run tests and collect coverage
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
 
-    - name: Run tests
-      run: npx jest --coverage
+      - name: Set up Node
+        uses: actions/setup-node@v4
 
-    - name: Upload results to Codecov
-      uses: codecov/codecov-action@v5
-      with:
-        token: ${{ secrets.CODECOV_TOKEN }}
-        slug: kangwuyi/vue3-spinkit
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npx jest --coverage
+
+      - name: Upload results to Codecov
+        uses: codecov/codecov-action@v5
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          slug: kangwuyi/vue3-spinkit
