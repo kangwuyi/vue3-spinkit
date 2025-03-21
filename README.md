@@ -1,22 +1,31 @@
 # vue3-spinkit
 
-[![npm version](https://img.shields.io/npm/v/vue3-spinkit)]
-(https://badge.fury.io/js/vue3-spinkit)
+<p align="center">
+  <!-- <a href="https://circleci.com/gh/vuejs/vue/tree/dev">
+    <img src="https://img.shields.io/circleci/project/github/vuejs/vue/dev.svg?sanitize=true" alt="Build Status">
+  </a> -->
+  <!-- <a href="https://codecov.io/github/vuejs/vue?branch=dev">
+    <img src="https://img.shields.io/codecov/c/github/vuejs/vue/dev.svg?sanitize=true" alt="Coverage Status">
+  </a> -->
+  <a href="https://npmcharts.com/compare/vue3-spinkit?minimal=true">
+    <img src="https://img.shields.io/npm/dm/vue3-spinkit.svg?sanitize=true" alt="Downloads">
+  </a>
+  <a href="https://www.npmjs.com/package/vue3-spinkit">
+    <img src="https://img.shields.io/npm/v/vue3-spinkit.svg?sanitize=true" alt="Version">
+  </a>
+  <a href="https://www.npmjs.com/package/vue3-spinkit">
+    <img src="https://img.shields.io/npm/l/vue3-spinkit.svg?sanitize=true" alt="License">
+  </a>
+</p>
 
-[![npm downloads](https://img.shields.io/npm/dm/vue3-spinkit)]
-(https://npm-stat.com/charts.html?package=vue3-spinkit)
-
-[![npm license](https://img.shields.io/npm/l/vue3-spinkit)]
-(https://github.com/kangwuyi/vue3-spinkit/LICENSE)
-
-<!-- [![Build Status](https://travis-ci.org/kangwuyi/vue3-spinkit.svg?branch=master)]
-(https://travis-ci.org/kangwuyi/vue3-spinkit) -->
-
-<!-- [![codecov](https://codecov.io/gh/kangwuyi/vue3-spinkit/branch/master/graph/badge.svg)]
-(https://codecov.io/gh/kangwuyi/vue3-spinkit) -->
-
-<!-- [![Stylelint](https://img.shields.io/badge/stylelint-enabled-brightgreen.svg)]
-(https://stylelint.io/) -->
+<p align="center">
+  <div style="display: inline-block;padding: 1px 0;border-radius: 2px;overflow: hidden;">
+    <a href="https://orcid.org/0009-0009-0993-7629" style="display: flex;align-items: center;background: #7e88cd;">
+        <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" alt="ORCID" style="padding: 0 5px;"/>
+      <span style="padding: 0 5px;background: #4a76b6;color: #ffffff;">0009-0009-0993-7629</span>
+    </a>
+  </div>
+</p>
 
 # pre
 fork from https://github.com/TonPC64/vue-spinkit（vue 2）
