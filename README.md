@@ -7,8 +7,20 @@
 </p>
 
 <p align="center">
-   <a href="https://orcid.org/0009-0009-0993-7629"><img src="https://img.shields.io/badge/iD-0009--0009--0993--7629-blue" alt="License"></a>
+  <a href="https://orcid.org/0009-0009-0993-7629"><img src="https://img.shields.io/badge/iD-0009--0009--0993--7629-blue" alt="License"></a>
+  <a href="https://ko-fi.com/kwy"><img src="https://badgen.net/badge/icon/kofi?icon=kofi&label=kwy" alt="Kwy"></a>
 </p>
+
+<p align="center">
+
+![Depfu](https://img.shields.io/depfu/kangwuyi/vue3-spinkit) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/kangwuyi/vue3-spinkit) [![Code Coverage](https://img.shields.io/codecov/c/github/kangwuyi/vue3-spinkit)](https://codecov.io/github/kangwuyi/vue3-spinkit)
+
+
+
+
+
+</p>
+
 
 
 # pre
