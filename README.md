@@ -13,10 +13,7 @@
 
 <p align="center">
 
-![Depfu](https://img.shields.io/depfu/kangwuyi/vue3-spinkit) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/kangwuyi/vue3-spinkit) [![Code Coverage](https://img.shields.io/codecov/c/github/kangwuyi/vue3-spinkit)](https://codecov.io/github/kangwuyi/vue3-spinkit)
-
-
-
+![Depfu](https://img.shields.io/depfu/kangwuyi/vue3-spinkit) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/kangwuyi/vue3-spinkit) [![Code Coverage](https://img.shields.io/codecov/c/github/kangwuyi/vue3-spinkit)](https://codecov.io/github/kangwuyi/vue3-spinkit) [![Code Coverage](https://github.com/kangwuyi/vue3-spinkit/actions/workflows/node.js.yml/badge.svg)](https://github.com/kangwuyi/kangwuyi/vue3-spinkit)
 
 
 </p>
