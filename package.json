@@ -1,6 +1,6 @@
 {
   "name": "vue3-spinkit",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "type": "module",
   "description": "A collection of loading indicators animated with CSS for VueJS",
   "author": "Chanwit Piromplad <kingkong2103@gmail.com>",
@@ -13,7 +13,7 @@
     "tsc": "tsc --project tsconfig.bundle.json",
     "bundle": "vite build --config=vite.config.bundle.js"
   },
-  "main": "build/vue3-spinner.js",
+  "main": "build/vue3-spinner.umd.cjs",
   "module": "build/vue3-spinner.js",
   "types": "build/components/index.d.ts",
   "files": [

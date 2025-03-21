@@ -1,14 +1,21 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
-    "jsx": "preserve",
-    "strict": true,
-    "target": "ES2015",
+    // ES2015
+    "target": "ESNext",
+    "noImplicitAny": false, //关闭any提示
+    "useDefineForClassFields": true,
+    "suppressImplicitAnyIndexErrors":false,
     "module": "ESNext",
+    "moduleResolution": "Node",
+    "strict": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "baseUrl": ".",
     "skipLibCheck": true,
     "esModuleInterop": true,
-    "moduleResolution": "Node",
-    "lib": ["esnext", "dom"],
+    "lib": ["ESNext", "DOM"],
     "allowImportingTsExtensions": true,
     // 设置编译后只生成.d.ts文件，不生成.js文件
     "emitDeclarationOnly": true,
@@ -17,8 +24,12 @@
     // 生成相应的 '.d.ts' 文件
     "declaration": true,
     "types": ["node"],
+    "paths": {
+      "@/*": ["./src/*"],
+    }
     // "noEmit": true
   },
   "include": ["./src/components/*.ts"],
-  "exclude": ["node_modules", "./src/vite-env.d.ts"]
+  "exclude": ["node_modules", "./src/vite-env.d.ts"],
+  "references": [{ "path": "./tsconfig.bundle.json" }]
 }
