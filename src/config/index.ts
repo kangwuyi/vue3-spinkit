@@ -1,5 +1,8 @@
+export interface SpinType {
+  [index: string]: { className?: string; node: number }
+}
 // Spinkit
-export const SPINKIT_ = {
+export const SPINKIT_: SpinType = {
   circle: { className: 'sk-circle', node: 12 },
   'cube-grid': { className: 'sk-cube-grid', node: 9 },
   wave: { className: 'sk-wave', node: 5 },
@@ -14,7 +17,7 @@ export const SPINKIT_ = {
   'fading-circle': { className: 'sk-fading-circle', node: 12 },
 }
 // Loaders.css
-export const LOADERS_CSS = {
+export const LOADERS_CSS: SpinType = {
   'square-spin': { node: 1 },
   'ball-grid-beat': { node: 9 },
   'ball-grid-pulse': { node: 9 },
@@ -41,7 +44,7 @@ export const LOADERS_CSS = {
   'triangle-skew-spin': { node: 1 },
 }
 // Loading.io
-export const LOADING_IO = {
+export const LOADING_IO: SpinType = {
   'circle-solid-spin': { className: 'sk-circle-solid-spin', node: 1 },
   'dual-ring': { className: 'sk-dual-ring', node: 0 },
   facebook: { className: 'sk-facebook', node: 3 },
@@ -54,7 +57,7 @@ export const LOADING_IO = {
   ripple: { className: 'sk-ripple', node: 2 },
 }
 // Awesome Spinners
-export const AWESOME_SPINNERS = {
+export const AWESOMESpinTypeNERS: SpinType = {
   loadbar: { className: 'sk-loadbar', node: 0 },
   hydrogen: { className: 'sk-hydrogen', node: 0 },
   clock: { className: 'sk-clock', node: 0 },

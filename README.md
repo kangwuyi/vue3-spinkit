@@ -3,6 +3,8 @@
 # pre
 fork from https://github.com/TonPC64/vue-spinkit（vue 2）
 
+file Unpacked Size from 410 kB to ~80kb
+
 ## Installation
 
 ```bash
@@ -16,6 +18,7 @@ npm install --save vue-spinkit
 ```js
 import { createApp } from 'vue'
 import Spinner from 'vue3-spinkit'
+import 'vue3-spinkit/build/vue3-spinner.css'
 import App from './App.vue'
 
 const app = createApp(App)

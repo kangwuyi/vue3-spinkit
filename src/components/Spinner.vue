@@ -17,15 +17,16 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { defineComponent, reactive, computed } from 'vue'
-import * as DEFAULT_CONFIG from '../config'
+import * as DEFAULT_CONFIG from '../config/index'
 
 export default defineComponent({
   name: 'imp-spinner',
   props: {
     name: {
       type: String,
+      default: '',
       require: true,
     },
     color: {

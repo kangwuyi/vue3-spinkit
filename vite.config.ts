@@ -17,9 +17,7 @@ export default defineConfig({
       transformMixedEsModules: true,
     },
   },
-  css: {
-    extract: false,
-  },
+  css: {},
   server: {
     hmr: true,
     host: '0.0.0.0',

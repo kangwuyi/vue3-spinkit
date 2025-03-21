@@ -13,9 +13,9 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { defineComponent, reactive } from 'vue'
-import * as DEFAULT_CONFIG from './config'
+import * as DEFAULT_CONFIG from './config/index.ts'
 import Spinner from './components/Spinner.vue'
 import randomColor from 'randomcolor'
 
@@ -36,7 +36,7 @@ export default defineComponent({
         count: keyList.length,
       }),
     )
-    const htmlTagText = (n, i) => {
+    const htmlTagText = (n: string, i: number) => {
       const tmp = i === void 0 ? '' : `color="${colorList[i]}" `
       return `<Spinner name="${n}" ${tmp}/>`
     }
