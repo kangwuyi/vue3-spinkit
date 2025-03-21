@@ -1,10 +1,17 @@
 import js from '@eslint/js'
+import tseslint from 'typescript-eslint'
 import pluginVue from 'eslint-plugin-vue'
 import eslintConfigPrettier from 'eslint-config-prettier/flat'
+import { defineConfigWithVueTs, vueTsConfigs } from '@vue/eslint-config-typescript'
+import standard from '@vue/eslint-config-standard-with-typescript'
 
-export default [
+export default defineConfigWithVueTs(
   js.configs.recommended,
+  ...tseslint.configs.recommended,
   ...pluginVue.configs['flat/recommended'],
+  vueTsConfigs.recommended,
+  vueTsConfigs.stylistic,
+  standard,
   eslintConfigPrettier,
   {
     files: [
@@ -34,10 +41,11 @@ export default [
       'vue/this-in-template': 'off',
       'vue/v-on-style': 'off',
       'vue/order-in-components': 'off',
+      'vue/component-definition-name-casing': 'off',
     },
     languageOptions: {
       ecmaVersion: 2022,
       sourceType: 'module',
     },
   },
-]
+)

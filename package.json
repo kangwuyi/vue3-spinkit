@@ -11,6 +11,7 @@
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore --fix src",
     "format": "prettier .  --write",
     "dev": "vite",
+    "tsc": "tsc --project tsconfig.bundle.json",
     "bundle": "vite build --config=vite.config.bundle.js"
   },
   "main": "build/vue3-spinner.js",
@@ -38,6 +39,7 @@
     "@types/randomcolor": "^0.5.9",
     "@vitejs/plugin-vue": "^5.2.3",
     "@vitejs/plugin-vue-jsx": "^4.1.2",
+    "@vue/eslint-config-typescript": "^14.5.0",
     "@vue/tsconfig": "^0.7.0",
     "eslint": "^9.22.0",
     "eslint-config-prettier": "^10.1.1",
@@ -46,6 +48,7 @@
     "prismjs": "^1.30.0",
     "randomcolor": "^0.6.2",
     "typescript": "^5.8.2",
+    "typescript-eslint": "^8.27.0",
     "unplugin-vue-define-options": "^3.0.0-beta.6",
     "vite": "^6.2.2",
     "vite-plugin-dts": "^4.5.3",
@@ -57,6 +60,10 @@
     "last 2 versions",
     "not dead"
   ],
-  "typings": "bundle/vue3-spinner.d.ts",
-  "license": "MIT"
+  "typings": "build/typings/components/Spinner.vue.d.ts",
+  "license": "MIT",
+  "dependencies": {
+    "@vue/eslint-config-standard-with-typescript": "^9.2.0",
+    "jiti": "^2.4.2"
+  }
 }

@@ -9,9 +9,9 @@ file Unpacked Size from 410 kB to ~80kb
 
 ```bash
 # use yarn
-yarn add vue-spinkit
+yarn add vue3-spinkit
 # use npm
-npm install --save vue-spinkit
+npm install --save vue3-spinkit
 ```
 
 ## How to use
@@ -42,3 +42,14 @@ app.mount('#app')
 | className | string | | add a custom classname to the outer div |
 | width | string | | set width of spinner |
 | height | string | | set heght of spinner |
+
+
+# 发包过程
+```
+npm run tsc
+api-extractor run
+npm run bundle
+npm publish
+```
+
+构建过程需要注意 `[pageage.json].typings` 与构建输出结果中的文件保持一致

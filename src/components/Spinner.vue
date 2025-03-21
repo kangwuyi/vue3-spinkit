@@ -19,7 +19,7 @@
 
 <script lang="ts">
 import { defineComponent, reactive, computed } from 'vue'
-import * as DEFAULT_CONFIG from '../config/index'
+import * as DEFAULT_CONFIG from '../config/index.ts'
 
 export default defineComponent({
   name: 'imp-spinner',
@@ -69,9 +69,9 @@ export default defineComponent({
     })
 
     const style = computed(() => {
-      let color = props.color !== '' ? 'color: ' + props.color + ';' : ''
-      let width = props.width !== '' ? 'width: ' + props.width + 'px;' : ''
-      let height = props.height !== '' ? 'height: ' + props.height + 'px;' : ''
+      const color = props.color !== '' ? 'color: ' + props.color + ';' : ''
+      const width = props.width !== '' ? 'width: ' + props.width + 'px;' : ''
+      const height = props.height !== '' ? 'height: ' + props.height + 'px;' : ''
       return 'text-align: center;' + color + width + height
     })
     return { loading, style }

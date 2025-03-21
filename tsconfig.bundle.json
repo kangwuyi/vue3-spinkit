@@ -10,8 +10,14 @@
     "moduleResolution": "Node",
     "lib": ["esnext", "dom"],
     "allowImportingTsExtensions": true,
-    "declaration": false,
-    "types": ["node"]
+    // 设置编译后只生成.d.ts文件，不生成.js文件
+    "emitDeclarationOnly": true,
+    // 使得 TypeScript 项目可以进行增量构建
+    // "composite": true,
+    // 生成相应的 '.d.ts' 文件
+    "declaration": true,
+    "types": ["node"],
+    // "noEmit": true
   },
   "include": ["./src/components"],
   "exclude": ["node_modules", "./src/vite-env.d.ts"]
