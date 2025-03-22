@@ -75,10 +75,10 @@ jobs:
         id: check
         uses: tehpsalmist/npm-publish-status-action@v1
 
-      - name: Publish to NPM ${{ steps.check.outputs.exists }}
+      - name: Publish to NPM
         uses: actions/setup-node@v4
         id: publish
-        if: ${{ steps.check.outputs.exists == '0' }}
+        if: ${{ '1' == '0' }}
         with:
           registry-url: https://registry.npmjs.org/
       - run: npm publish
