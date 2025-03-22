@@ -66,6 +66,7 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - run: npm ci
       - run: npm run bundle
+      - run: npm run build
       - run: npm run build-storybook
 
       - name: Check publish status
@@ -98,5 +99,13 @@ jobs:
         with:
           domain: 'vue3-spinkit.surge.sh'
           root: './storybook-static'
+        env:
+          SURGE_TOKEN: ${{secrets.SURGE_SH_TOKEN}}
+      
+      - name: Deploy to vue3.spinkit.surge.sh
+        uses: kangwuyi/surge-sh-action@v1.1.0
+        with:
+          domain: 'vue3.spinkit.surge.sh'
+          root: './build
         env:
           SURGE_TOKEN: ${{secrets.SURGE_SH_TOKEN}}

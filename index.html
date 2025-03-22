@@ -8,6 +8,37 @@
     <title>vue3-spinkit</title>
 
     <style>
+        .k-corner,
+        .storybook-corner,
+        .github-corner {
+            position: fixed;
+            right: 0;
+            cursor: pointer;
+            z-index: 999;
+        }
+
+        .k-corner {
+            top: 220px;
+        }
+
+        .storybook-corner {
+            top: 120px;
+        }
+
+        .github-corner {
+            top: 0;
+        }
+
+        .k-corner .storybook-icon {
+            width: 50px;
+            height: auto;
+        }
+
+        .storybook-corner .storybook-icon {
+            width: 50px;
+            height: auto;
+        }
+
         .github-corner:hover .octo-arm {
             animation: octocat-wave 560ms ease-in-out
         }
@@ -45,6 +76,14 @@
 
 <body>
     <noscript>好无聊...</noscript>
+    <a href="http://kangkk.com/" target="_blank" class="k-corner" aria-label="View kk on web url">
+        <img class="storybook-icon" src="https://avatars.githubusercontent.com/u/7037501?v=4">
+    </a>
+    <a href="http://vue3-spinkit.surge.sh/" target="_blank" class="storybook-corner"
+        aria-label="View source on Storybook">
+        <img class="storybook-icon"
+            src="https://raw.githubusercontent.com/storybookjs/brand/main/icon/icon-storybook-monochrome.svg">
+    </a>
     <a href="https://github.com/kangwuyi/vue3-spinkit" target="_blank" class="github-corner"
         aria-label="View source on GitHub">
         <svg width="80" height="80" viewBox="0 0 250 250"
