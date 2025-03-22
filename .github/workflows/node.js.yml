@@ -83,11 +83,11 @@ jobs:
         if: ${{ steps.check.outputs.exists == '0' }}
         run: npm config set registry https://npm.pkg.github.com/
           
-      - name: Publish to Github Packages
-        if: ${{ steps.check.outputs.exists == '0' }}
-        run: npm publish
-        env:
-          GITHUB_TOKEN: ${{secrets.PACKAGES_TOKEN}}
+      # - name: Publish to Github Packages
+      #   if: ${{ steps.check.outputs.exists == '0' }}
+      #   run: npm publish
+      #   env:
+      #     GITHUB_TOKEN: ${{secrets.PACKAGES_TOKEN}}
 
       - name: Report publish status
         if: ${{ steps.check.outputs.exists == '1' }}
