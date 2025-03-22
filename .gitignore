@@ -30,3 +30,6 @@ pnpm-debug.log*
 # jest
 coverage
 *storybook.log
+
+# storybook
+storybook-static/
