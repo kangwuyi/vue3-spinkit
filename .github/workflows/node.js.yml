@@ -94,7 +94,7 @@ jobs:
         run: 'echo "package version already exists on npm registry"'
 
       - name: Deploy to vue3-spinkit.surge.sh
-        uses: kangwuyi/surge-sh-action@v1.0.2
+        uses: kangwuyi/surge-sh-action@v1.0.4
         with:
           domain: 'vue3-spinkit.surge.sh'
           root: './disk'
