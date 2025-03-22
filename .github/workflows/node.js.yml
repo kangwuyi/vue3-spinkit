@@ -71,10 +71,16 @@ jobs:
       - run: npm run bundle
       - run: npm run build
 
+      - name: Check publish status
+        id: check
+        uses: tehpsalmist/npm-publish-status-action@v1
+
       - name: Publish to NPM
         uses: actions/setup-node@v4
         with:
           registry-url: https://registry.npmjs.org/
+        # package version doesn't yet exist, ship it!
+        if: ${{ steps.check.outputs.exists == '0' }}
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
@@ -83,9 +89,14 @@ jobs:
         uses: actions/setup-node@v4
         with:
           registry-url: https://npm.pkg.github.com/
+        if: ${{ steps.check.outputs.exists == '0' }}
       - run: npm publish
         env:
           GITHUB_TOKEN: ${{secrets.PACKAGES_TOKEN}}
+
+      - name: Report publish status
+        if: ${{ steps.check.outputs.exists == '1' }}
+      - run: 'echo "package version already exists on npm registry"'
 
       - name: Deploy to vue3-spinkit.surge.sh
         uses: kangwuyi/surge-sh-action@v1.0.0
