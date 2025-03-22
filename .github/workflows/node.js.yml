@@ -87,4 +87,4 @@ jobs:
           domain: 'vue3-spinkit.surge.sh'
           root: './disk'
         env:
-          SURGE_TOKEN: ${{secrets.SURGE_TOKEN}}
+          SURGE_TOKEN: ${{secrets.SURGE_SH_TOKEN}}
