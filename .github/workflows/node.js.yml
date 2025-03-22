@@ -70,33 +70,31 @@ jobs:
       - run: npm ci
       - run: npm run bundle
       - run: npm run build
-
-      - name: Check publish status
-        id: check
-        uses: tehpsalmist/npm-publish-status-action@v1
+      - uses: MeilCli/npm-update-check-action@v5
+        id: outdated
 
       - name: Publish to NPM
         uses: actions/setup-node@v4
+        # package version doesn't yet exist, ship it!
+        if: steps.outdated.outputs.has_npm_update != 'false'
         with:
           registry-url: https://registry.npmjs.org/
-        # package version doesn't yet exist, ship it!
-        if: ${{ steps.check.outputs.exists == '0' }}
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           
       - name: Publish to Github Packages
         uses: actions/setup-node@v4
+        if: steps.outdated.outputs.has_npm_update != 'false'
         with:
           registry-url: https://npm.pkg.github.com/
-        if: ${{ steps.check.outputs.exists == '0' }}
       - run: npm publish
         env:
           GITHUB_TOKEN: ${{secrets.PACKAGES_TOKEN}}
 
       - name: Report publish status
         uses: actions/setup-node@v4
-        if: ${{ steps.check.outputs.exists == '1' }}
+        if: steps.outdated.outputs.has_npm_update != 'false'
       - run: 'echo "package version already exists on npm registry"'
 
       - name: Deploy to vue3-spinkit.surge.sh
