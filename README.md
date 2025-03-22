@@ -1,14 +1,17 @@
 # vue3-spinkit
 
 <p align="center">
-  <a href="https://npmcharts.com/compare/vue3-spinkit?minimal=true"><img src="https://img.shields.io/npm/dm/vue3-spinkit.svg?sanitize=true" alt="Downloads"></a>
+  <a href="https://www.npmjs.com/package/vue3-spinkit"><img src="https://img.shields.io/npm/dm/vue3-spinkit.svg?sanitize=true" alt="Downloads"></a>
   <a href="https://www.npmjs.com/package/vue3-spinkit"><img src="https://img.shields.io/npm/v/vue3-spinkit.svg?sanitize=true" alt="Version"></a>
   <a href="https://www.npmjs.com/package/vue3-spinkit"><img src="https://img.shields.io/npm/l/vue3-spinkit.svg?sanitize=true" alt="License"></a>
 </p>
 
 <p align="center">
-  <a href="https://orcid.org/0009-0009-0993-7629"><img src="https://img.shields.io/badge/iD-0009--0009--0993--7629-blue" alt="License"></a>
-  <a href="https://ko-fi.com/kwy"><img src="https://badgen.net/badge/icon/kofi?icon=kofi&label=kwy" alt="Kwy"></a>
+  <a href="https://orcid.org/0009-0009-0993-7629"><img src="https://img.shields.io/badge/iD-0009--0009--0993--7629-f5f5f5" alt="Orcid"></a>
+  <a href="https://ko-fi.com/kwy"><img src="https://badgen.net/badge/icon/kofi?icon=kofi&label=kwy&color=F16061" alt="Kwy"></a>
+
+<!-- [![iD: 0009-0009-0993-7629](https://img.shields.io/badge/0009--0009--0993--7629-blue.svg?style=for-the-badge&logo=orcid)](https://orcid.org/0009-0009-0993-7629) [![Ko-fi](https://img.shields.io/badge/ko--fi-F16061?style=for-the-badge&logo=kofi&logoColor=f5f5f5)](https://ko-fi.com/kwy) -->
+
 </p>
 
 <p align="center">
@@ -17,6 +20,7 @@
 
 
 </p>
+
 
 
 

@@ -8,7 +8,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
@@ -49,3 +48,43 @@ jobs:
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           slug: kangwuyi/vue3-spinkit
+
+
+  publish-npm:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 23
+          registry-url: https://registry.npmjs.org/
+      - run: npm ci
+      - run: npm run bundle
+      - run: npm run build
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.AUTH_TOKEN}}
+
+      - name: Change npm registry
+        with:
+          registry-url: https://npm.pkg.github.com/
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.PACKAGES_TOKEN}}
+
+      - name: Deploy to vue3-spinkit.surge.sh
+        uses: kangwuyi/surge-sh-action@v1
+        with:
+          domain: 'vue3-spinkit.surge.sh'
+          root: './disk'
+        env:
+          SURGE_TOKEN: ${{secrets.SURGE_TOKEN}}
