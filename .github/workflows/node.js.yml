@@ -9,11 +9,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     strategy:
       matrix:
         node-version: [23.x]
-       
     steps:
       - uses: actions/checkout@v4
       - name: Use Node.js ${{ matrix.node-version }}
@@ -55,7 +53,6 @@ jobs:
     permissions:
       contents: read
       packages: write
-      
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -76,26 +73,23 @@ jobs:
         uses: tehpsalmist/npm-publish-status-action@v1
 
       - name: Publish to NPM
-        uses: actions/setup-node@v4
         id: publish
         if: ${{ steps.check.outputs.exists == '0' }}
-        with:
-          registry-url: https://registry.npmjs.org/
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           
-      - name: Publish to Github Packages
-        uses: actions/setup-node@v4
+      - name: Change npm registry
         if: ${{ steps.check.outputs.exists == '0' }}
-        with:
-          registry-url: https://npm.pkg.github.com/
+        run: npm config set registry https://npm.pkg.github.com/
+          
+      - name: Publish to Github Packages
+        if: ${{ steps.check.outputs.exists == '0' }}
         run: npm publish
         env:
           GITHUB_TOKEN: ${{secrets.PACKAGES_TOKEN}}
 
       - name: Report publish status
-        uses: actions/setup-node@v4
         if: ${{ steps.check.outputs.exists == '1' }}
         run: 'echo "package version already exists on npm registry"'
 
