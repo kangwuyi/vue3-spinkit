@@ -46,13 +46,13 @@ import 'vue3-spinkit/build/vue3-spinner.css'
 import App from './App.vue'
 
 const app = createApp(App)
-app.component('Spinner', Spinner)
+app.use(Spinner)
 app.mount('#app')
 ```
 
 ## In file vue
 ```html
-<Spinner name="circle" color="red"/>
+<imp-spinner name="circle" color="red" />
 ```
 
 ## Props
@@ -68,7 +68,7 @@ app.mount('#app')
 | height | string | | set heght of spinner |
 
 
-# 发包过程
+<!-- # 发包过程
 ```
 npm run tsc
 api-extractor run
@@ -76,4 +76,4 @@ npm run bundle
 npm publish
 ```
 
-构建过程需要注意 `[pageage.json].typings` 与构建输出结果中的文件保持一致
+构建过程需要注意 `[pageage.json].typings` 与构建输出结果中的文件保持一致 -->
