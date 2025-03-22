@@ -12,7 +12,9 @@
     "format": "prettier .  --write",
     "dev": "vite",
     "tsc": "tsc --project tsconfig.bundle.json",
-    "bundle": "vite build --config=vite.config.bundle.js"
+    "bundle": "vite build --config=vite.config.bundle.js",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "main": "build/vue3-spinner.umd.cjs",
   "module": "build/vue3-spinner.js",
@@ -35,27 +37,42 @@
     "vue3-loading"
   ],
   "devDependencies": {
+    "@chromatic-com/storybook": "^3.2.6",
     "@nabla/vite-plugin-eslint": "^2.0.5",
+    "@storybook/addon-docs": "^8.6.8",
+    "@storybook/addon-essentials": "^8.6.8",
+    "@storybook/addon-onboarding": "^8.6.8",
+    "@storybook/blocks": "^8.6.8",
+    "@storybook/experimental-addon-test": "^8.6.8",
+    "@storybook/test": "^8.6.8",
+    "@storybook/vue3": "^8.6.8",
+    "@storybook/vue3-vite": "^8.6.8",
     "@types/node": "^22.13.10",
     "@types/randomcolor": "^0.5.9",
     "@vitejs/plugin-vue": "^5.2.3",
     "@vitejs/plugin-vue-jsx": "^4.1.2",
+    "@vitest/browser": "^3.0.9",
+    "@vitest/coverage-v8": "^3.0.9",
     "@vue/eslint-config-standard-with-typescript": "^9.2.0",
     "@vue/eslint-config-typescript": "^14.5.0",
     "@vue/tsconfig": "^0.7.0",
     "eslint": "^9.22.0",
     "eslint-config-prettier": "^10.1.1",
+    "eslint-plugin-storybook": "^0.11.6",
     "eslint-plugin-vue": "^10.0.0",
     "jest": "^29.7.0",
     "jiti": "^2.4.2",
+    "playwright": "^1.51.1",
     "prettier": "^3.5.3",
     "prismjs": "^1.30.0",
     "randomcolor": "^0.6.2",
+    "storybook": "^8.6.8",
     "typescript": "^5.8.2",
     "typescript-eslint": "^8.27.0",
     "unplugin-vue-define-options": "^3.0.0-beta.6",
     "vite": "^6.2.2",
     "vite-plugin-dts": "^4.5.3",
+    "vitest": "^3.0.9",
     "vue": "^3.5.13",
     "vue-tsc": "^2.2.8"
   },
@@ -64,5 +81,10 @@
     "last 2 versions",
     "not dead"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "eslintConfig": {
+    "extends": [
+      "plugin:storybook/recommended"
+    ]
+  }
 }

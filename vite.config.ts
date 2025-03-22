@@ -8,6 +8,7 @@ export default defineConfig({
   plugins: [vue(), vueJsx(), eslintLoad({})],
   base: './',
   publicDir: 'public',
+  assetsInclude: ['**/*.md'],
   build: {
     sourcemap: true,
     outDir: 'dist',

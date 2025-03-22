@@ -1,0 +1,18 @@
+import { Canvas, Meta } from '@storybook/blocks';
+import { Markdown } from '@storybook/addon-docs/blocks';
+import * as LoadingStories from './Loading.stories';
+import README from '../../README.md?raw'
+
+<Meta title="Example/vue3-spinkit" of={LoadingStories} />
+
+<Canvas of={LoadingStories.Package} />
+
+<Markdown>{README}</Markdown>
+
+<style>
+  {`
+    #storybook-docs .sbdocs-wrapper {
+      padding: 0 20px !important;
+    }
+  `}
+</style>
