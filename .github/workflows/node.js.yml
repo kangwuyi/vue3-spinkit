@@ -95,6 +95,7 @@ jobs:
           GITHUB_TOKEN: ${{secrets.PACKAGES_TOKEN}}
 
       - name: Report publish status
+        uses: actions/setup-node@v4
         if: ${{ steps.check.outputs.exists == '1' }}
       - run: 'echo "package version already exists on npm registry"'
 
