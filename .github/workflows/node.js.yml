@@ -75,7 +75,7 @@ jobs:
         id: check
         uses: tehpsalmist/npm-publish-status-action@v1
 
-      - name: Publish to NPM
+      - name: Publish to NPM ${{ steps.check.outputs.exists }}
         uses: actions/setup-node@v4
         id: publish
         if: ${{ steps.check.outputs.exists == '0' }}
