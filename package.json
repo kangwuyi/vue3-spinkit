@@ -2,7 +2,7 @@
   "name": "vue3-spinkit",
   "version": "0.1.0",
   "type": "module",
-  "homepage": "http://vue3.spinkit.surge.sh/",
+  "homepage": "http://vue3-spinkit.surge.sh/",
   "description": "A collection of loading indicators animated with CSS for VueJS 3",
   "author": "Chanwit Piromplad <kingkong2103@gmail.com>",
   "scripts": {
