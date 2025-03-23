@@ -16,11 +16,11 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
-  "main": "build/vue3-spinner.umd.cjs",
-  "module": "build/vue3-spinner.js",
-  "types": "build/components/index.d.ts",
+  "main": "bundle/vue3-spinner.umd.cjs",
+  "module": "bundle/vue3-spinner.js",
+  "types": "bundle/components/index.d.ts",
   "files": [
-    "build",
+    "bundle",
     "index.d.ts"
   ],
   "repository": {

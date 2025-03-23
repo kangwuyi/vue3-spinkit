@@ -99,6 +99,6 @@ jobs:
         uses: kangwuyi/surge-sh-action@v1.1.0
         with:
           domain: 'vue3.spinkit.surge.sh'
-          root: './build'
+          root: './dist'
         env:
           SURGE_TOKEN: ${{secrets.SURGE_SH_TOKEN}}

@@ -22,11 +22,11 @@ export default defineConfig({
       copyDtsFiles: false,
       // 强制删除所有 Vite（Rollup）的原始产物
       declarationOnly: false,
-      outDir: 'build',
+      outDir: 'bundle',
     }),
   ],
   build: {
-    outDir: 'build',
+    outDir: 'bundle',
     rollupOptions: {
       // 请确保外部化那些你的库中不需要的依赖，忽略打包vue文件
       external: ['vue'],
