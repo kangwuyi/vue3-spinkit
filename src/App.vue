@@ -25,8 +25,7 @@ export default defineComponent({
     Spinner,
   },
   setup() {
-    const source = ref('')
-    const { text, copy } = useClipboard({ source })
+    const { text, copy } = useClipboard({ source: '' })
     const spinMap = reactive(
       Object.values(DEFAULT_CONFIG).reduce((_, v) => {
         return Object.assign(_, v)
@@ -50,7 +49,7 @@ export default defineComponent({
       { immediate: true },
     )
 
-    return { copy, spinMap, keyList, colorList }
+    return { copy, keyList, colorList }
   },
 })
 </script>
