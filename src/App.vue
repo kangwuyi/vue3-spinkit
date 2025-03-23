@@ -11,7 +11,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive, watch } from 'vue'
+import { defineComponent, reactive, ref, watch } from 'vue'
 import { useClipboard } from '@vueuse/core'
 import { toast } from 'vue3-toastify'
 import 'vue3-toastify/dist/index.css'
@@ -25,7 +25,8 @@ export default defineComponent({
     Spinner,
   },
   setup() {
-    const { text, copy } = useClipboard({ source: '' })
+    const source = ref('')
+    const { text, copy } = useClipboard({ source })
     const spinMap = reactive(
       Object.values(DEFAULT_CONFIG).reduce((_, v) => {
         return Object.assign(_, v)
