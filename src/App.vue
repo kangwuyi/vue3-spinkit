@@ -2,7 +2,7 @@
   <h1>Vue 3 Spinkit</h1>
 
   <div class="container">
-    <div :key="_" v-for="(_, i) in keyList" class="column" @click="copy(_)">
+    <div :key="_" v-for="(_, i) in keyList" class="column" :data-spin="_" @click.native="copy(_)">
       <div class="spin-box">
         <Spinner :name="_" :color="colorList[i]" />
       </div>
