@@ -22,6 +22,7 @@ jobs:
       - run: npm ci
       - run: npm run build 
       - run: npm run bundle
+      - run: mv storybook-static dist/
 
   test:
     name: Run tests and collect coverage
@@ -93,14 +94,6 @@ jobs:
       - name: Report publish status
         if: ${{ steps.check.outputs.exists == '1' }}
         run: 'echo "package version already exists on npm registry"'
-
-      - name: Deploy to vue3-spinkit.surge.sh
-        uses: kangwuyi/surge-sh-action@v1.1.0
-        with:
-          domain: 'vue3-spinkit.surge.sh'
-          root: './storybook-static'
-        env:
-          SURGE_TOKEN: ${{secrets.SURGE_SH_TOKEN}}
       
       - name: Deploy to vue3.spinkit.surge.sh
         uses: kangwuyi/surge-sh-action@v1.1.0
