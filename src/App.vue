@@ -1,5 +1,5 @@
 <template>
-  <h1>Vue 3 Spinkit</h1>
+  <h1 @click.native="console.log('hi~')">Vue 3 Spinkit</h1>
 
   <div class="container">
     <div :key="_" v-for="(_, i) in keyList" class="column" :data-spin="_" @click.native="copy(_)">
