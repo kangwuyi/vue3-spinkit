@@ -95,10 +95,10 @@ jobs:
         if: ${{ steps.check.outputs.exists == '1' }}
         run: 'echo "package version already exists on npm registry"'
       
-      - name: Deploy to vue3.spinkit.surge.sh
+      - name: Deploy to vue3-spinkit.surge.sh
         uses: kangwuyi/surge-sh-action@v1.1.0
         with:
-          domain: 'vue3.spinkit.surge.sh'
+          domain: 'vue3-spinkit.surge.sh'
           root: './dist'
         env:
           SURGE_TOKEN: ${{secrets.SURGE_SH_TOKEN}}

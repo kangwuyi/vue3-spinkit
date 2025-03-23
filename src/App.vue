@@ -1,8 +1,19 @@
 <template>
-  <h1 @click.native="console.log('hi~')">Vue 3 Spinkit</h1>
+  <h1 @click.native="console.log('hi~')">
+    Vue 3 Spinkit
+    <small v-if="spinName" class="small-font">
+      , the spin name is <span>{{ spinName }}</span>
+    </small>
+  </h1>
 
   <div class="container">
-    <div :key="_" v-for="(_, i) in keyList" class="column" :data-spin="_" @click.native="copy(_)">
+    <div
+      :key="_"
+      v-for="(_, i) in keyList"
+      class="column"
+      :data-spin="_"
+      @click.native="handleClick(_)"
+    >
       <div class="spin-box">
         <Spinner :name="_" :color="colorList[i]" />
       </div>
@@ -38,6 +49,12 @@ export default defineComponent({
       }),
     )
     //
+    const spinName = ref('')
+    const handleClick = (v: string) => {
+      spinName.value = v
+      copy(v)
+    }
+    //
     watch(
       () => text.value,
       (_new, _old) => {
@@ -49,13 +66,14 @@ export default defineComponent({
       { immediate: true },
     )
 
-    return { copy, keyList, colorList }
+    return { handleClick, spinName, keyList, colorList }
   },
 })
 </script>
 
 <style scoped>
 .container {
+  position: relative;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -80,5 +98,13 @@ export default defineComponent({
   width: 150px;
   height: 150px;
   cursor: pointer;
+}
+.small-font {
+  font-size: 14px;
+  color: #999999;
+}
+.small-font span {
+  position: sticky;
+  color: red;
 }
 </style>
