@@ -22,7 +22,6 @@ jobs:
       - run: npm ci
       - run: npm run build 
       - run: npm run bundle
-      - run: mv storybook-static dist/
 
   test:
     name: Run tests and collect coverage
@@ -69,6 +68,7 @@ jobs:
       - run: npm run bundle
       - run: npm run build
       - run: npm run build-storybook
+      - run: mv storybook-static dist/
 
       - name: Check publish status
         id: check
