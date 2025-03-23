@@ -68,7 +68,7 @@ jobs:
       - run: npm run bundle
       - run: npm run build
       - run: npm run build-storybook
-      - run: mv storybook-static dist/
+      - run: mv storybook-static dist/storybook-static
 
       - name: Check publish status
         id: check
