@@ -1,4 +1,5 @@
 <template>
+  <Linking repo="vue3-spinkit" />
   <h1 @click.native="console.log('hi~')">
     Vue 3 Spinkit
     <small v-if="spinName" class="small-font">

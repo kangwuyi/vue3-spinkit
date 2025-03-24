@@ -81,9 +81,9 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           
-      - name: Change npm registry
-        if: ${{ steps.check.outputs.exists == '0' }}
-        run: npm config set registry https://npm.pkg.github.com/
+      # - name: Change npm registry
+      #   if: ${{ steps.check.outputs.exists == '0' }}
+      #   run: npm config set registry https://npm.pkg.github.com/
           
       # - name: Publish to Github Packages
       #   if: ${{ steps.check.outputs.exists == '0' }}
